@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^index\.html$ index.php [L]
+RewriteRule ^([a-zA-Z0-9-_()/]+)$  produkdetail.php?id=$1 [L]
+RewriteRule ^invoice([a-zA-Z0-9-_()/]+)-(.*)\.html$ invoice.php?id=$1 [L]
+RewriteRule ^kategori([a-zA-Z0-9-_()/]+)-(.*)\.html$ kategori.php?id=$1 [L]
+RewriteRule ^halaman([a-zA-Z0-9-_()/]+)-(.*)\.html$ halaman.php?id=$1 [L]
+RewriteRule ^ulasan([a-zA-Z0-9-_()/]+)-(.*)\.html$ ulasan.php?id=$1 [L]
+RewriteRule ^promo([a-zA-Z0-9-_()/]+)-(.*)\.html$ promo.php?id=$1 [L]
+RewriteRule ^print([a-zA-Z0-9-_()/]+)-(.*)\.html$ print.php?id=$1 [L]
+RewriteRule ^blog([a-zA-Z0-9-_()/]+)-(.*)\.html$ blog.php?id=$1 [L]
+
+RewriteRule ^bukti([a-zA-Z0-9-_()/]+)-(.*)\.html$ bukti.php?id=$1 [L]
+RewriteRule ^sitemap\.xml/?$ sitemap.php
+Options All -Indexes
+
