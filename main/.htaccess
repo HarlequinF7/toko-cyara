@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^index\.html$ index.php [L]
+RewriteRule ^produkdetail([0-9]+)-(.*)\.html$ produkdetail.php?id=$1 [L]
+RewriteRule ^invoice([0-9]+)-(.*)\.html$ invoice.php?id=$1 [L]
+RewriteRule ^kategori([0-9]+)-(.*)\.html$ kategori.php?id=$1 [L]
+RewriteRule ^halaman([0-9]+)-(.*)\.html$ halaman.php?id=$1 [L]
+RewriteRule ^ulasan([0-9]+)-(.*)\.html$ ulasan.php?id=$1 [L]
+RewriteRule ^promo([0-9]+)-(.*)\.html$ promo.php?id=$1 [L]
+RewriteRule ^print([0-9]+)-(.*)\.html$ print.php?id=$1 [L]
+RewriteRule ^sitemap\.xml/?$ sitemap.php
+Options All -Indexes
+
